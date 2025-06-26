@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CleanCSV - Detailed Features</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <style>
+        .hero-banner {
+            position: relative;
+            height: 40vh;
+            background: url('images_videos/more_detail.jpeg') no-repeat center center;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            transition: background-color 0.3s ease;
+        }
+        .hero-banner:hover .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            transform: translateY(0);
+            transition: transform 0.3s ease;
+        }
+        .hero-banner:hover .hero-content {
+            transform: translateY(-5px);
+        }
+        .feature-section {
+            padding: 3rem 0;
+        }
+        .feature-card {
+            margin-bottom: 4rem;
+            border: none;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        .feature-img {
+            border-radius: 8px;
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            max-height: 400px;
+            transition: transform 0.3s ease;
+        }
+        .feature-card:hover .feature-img {
+            transform: scale(1.02);
+        }
+        .feature-text {
+            padding: 2rem;
+        }
+        .feature-card:hover .feature-text h3 {
+            color: #0d6efd;
+        }
+        .nav-tabs .nav-link {
+            transition: all 0.2s ease;
+        }
+        .nav-tabs .nav-link.active {
+            font-weight: bold;
+            border-bottom: 3px solid #0d6efd;
+        }
+        .nav-tabs .nav-link:not(.active):hover {
+            color: #0d6efd;
+            border-bottom-color: rgba(13, 110, 253, 0.3);
+        }
+        .feature-highlight {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+        .feature-card:hover .feature-highlight {
+            background-color: #e9f0ff;
+        }
+        .btn-primary {
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(13, 110, 253, 0.3);
+        }
+        li {
+            transition: transform 0.2s ease;
+            padding-left: 5px;
+        }
+        li:hover {
+            transform: translateX(5px);
+            color: #0d6efd;
+        }
+        li::before {
+            content: "•";
+            color: #0d6efd;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+            transition: transform 0.2s ease;
+        }
+        li:hover::before {
+            transform: scale(1.3);
+        }
+        hr {
+            transition: border-color 0.3s ease;
+        }
+        .feature-section:hover hr {
+            border-color: #0d6efd;
+        }
+        .text-muted {
+            transition: color 0.3s ease;
+        }
+        .feature-card:hover .text-muted {
+            color: #495057 !important;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Banner -->
+    <section class="hero-banner">
+        <div class="hero-overlay"></div>
+        <div class="hero-content container">
+            <h1 class="display-4 fw-bold mb-4">CleanCSV Detailed Features</h1>
+            <p class="lead mb-5">Learn about the powerful tools that make your data cleaning process efficient and customizable</p>
+            <a href="index.html" class="btn btn-primary btn-lg px-4">
+                <i class="bi bi-arrow-left"></i> Back to Home
+            </a>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main id="features" class="container">
+        <!-- Default Variables Section Header -->
+        <section class="text-center py-5">
+            <h2 class="fw-bold mb-3">Default Variables Page</h2>
+            <p class="lead text-muted">Customize your cleaning preferences for different CSV file types</p>
+        </section>
+
+        <!-- Default Variables Features -->
+        <section class="feature-section">
+            <!-- Feature 1: Default Variables Overview -->
+            <div class="card feature-card">
+                <div class="row g-0">
+                    <div class="col-md-6">
+                        <img src="images_videos/default_v.png" class="feature-img" alt="Default Variables Page">
+                    </div>
+                    <div class="col-md-6 d-flex align-items-center">
+                        <div class="feature-text">
+                            <h3 class="fw-bold mb-3">Default Variables Overview</h3>
+                            <p>This page controls the default columns to be cleaned when a CSV file is imported. Users don't need to manually select these columns every time they import the same type of CSV files.</p>
+                            <p>The Default Variables page serves as your central hub for managing cleaning presets, saving you time on repetitive tasks.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 2: Included Columns -->
+            <div class="card feature-card">
+                <div class="row g-0">
+                    <div class="col-md-6 order-md-2">
+                        <img src="images_videos/default_columns.png" class="feature-img" alt="Included Columns Area">
+                    </div>
+                    <div class="col-md-6 order-md-1 d-flex align-items-center">
+                        <div class="feature-text">
+                            <h3 class="fw-bold mb-3">Included Columns Management</h3>
+                            <p>Easily specify which columns should always be included in your cleaned files. The interface provides:</p>
+                            <ul>
+                                <li>Clear visual indicators for included columns</li>
+                                <li>Quick toggle options for each column</li>
+                                <li>Bulk selection capabilities</li>
+                                <li>Column preview to verify your selections</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 3: Add Column -->
+            <div class="card feature-card">
+                <div class="row g-0">
+                    <div class="col-md-6">
+                        <img src="images_videos/add_column.png" class="feature-img" alt="Add Column Button">
+                    </div>
+                    <div class="col-md-6 d-flex align-items-center">
+                        <div class="feature-text">
+                            <h3 class="fw-bold mb-3">Adding New Columns</h3>
+                            <p>Expand your cleaning presets by adding new columns to your default variables:</p>
+                            <ul>
+                                <li>Simple one-click addition of columns</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="my-5">
+
+        <!-- History Page Section Header -->
+        <section class="text-center py-5">
+            <h2 class="fw-bold mb-3">History Page</h2>
+            <p class="lead text-muted">Track and manage all your imported and cleaned files</p>
+        </section>
+
+        <!-- History Page Features -->
+        <section class="feature-section">
+            <!-- Feature 1: History Overview -->
+            <div class="card feature-card">
+                <div class="row g-0">
+                    <div class="col-md-6">
+                        <img src="images_videos/history.png" class="feature-img" alt="History Page Overview">
+                    </div>
+                    <div class="col-md-6 d-flex align-items-center">
+                        <div class="feature-text">
+                            <h3 class="fw-bold mb-3">File History Tracking</h3>
+                            <p>The History page is organized into two convenient tabs for easy navigation between your imported and cleaned files.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 2: Right-Click Menu -->
+            <div class="card feature-card">
+                <div class="row g-0">
+                    <div class="col-md-6 order-md-2">
+                        <img src="images_videos/popup.png" class="feature-img" alt="Right-Click Menu">
+                    </div>
+                    <div class="col-md-6 order-md-1 d-flex align-items-center">
+                        <div class="feature-text">
+                            <h3 class="fw-bold mb-3">File Management Options</h3>
+                            <p>Right-click on any file to access powerful context-sensitive options:</p>
+                                <div class="col-md-6">
+                                    <ul>
+                                        <li>Open directly</li>
+                                        <li>Download or Save As file</li>
+                                    </ul>
+                                </div>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark text-white">
+        <div class="container text-center">
+            <h2 class="fw-bold mb-3">
+                <i class="bi bi-file-earmark-spreadsheet"></i> CleanCSV
+            </h2>
+            <p class="mb-4">The simplest way to clean and prepare your CSV files for analysis.</p>
+            <p class="small mb-0">&copy; 2023 CleanCSV. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
